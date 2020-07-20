@@ -22,5 +22,10 @@ jobs:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
 
+    - name: Get Beaker client
+      run: |
+        wget https://github.com/allenai/beaker/releases/download/v20200716/beaker_linux.tar.gz
+        tar -xvzf beaker_linux.tar.gz -C /usr/local/bin
+
     - name: Build Docker image
       run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
