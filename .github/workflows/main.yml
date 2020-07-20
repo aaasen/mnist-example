@@ -25,7 +25,8 @@ jobs:
     - name: Get Beaker client
       run: |
         wget https://github.com/allenai/beaker/releases/download/v20200716/beaker_linux.tar.gz
-        tar -xvzf beaker_linux.tar.gz -C /usr/local/bin
+        tar -xvzf beaker_linux.tar.gz
+        ./beaker
 
     - name: Build Docker image
       run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
