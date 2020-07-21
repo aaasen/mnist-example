@@ -1,15 +1,4 @@
 name: Beaker Image Builder
-description: The Beaker Image Builder builds Docker images and creates Beaker images.
-
-inputs:
-  dockerfile:
-    description: Path to the Dockerfile. Defaults to `Dockerfile`.
-    required: false
-    default: 'Dockerfile'
-
-outputs:
-  image:
-    description: Created Beaker image's ID.
 
 on:
   push:
