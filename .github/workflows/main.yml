@@ -26,4 +26,4 @@ jobs:
       run: docker build . --file Dockerfile --tag beaker-cloud-build
 
     - name: Create Beaker image
-      run: echo "::set-output name=image::${./beaker image create beaker-cloud-build}"
+      run: echo "::set-output name=image::$(./beaker image create beaker-cloud-build)"
