@@ -29,7 +29,7 @@ jobs:
       run: docker pull docker.pkg.github.com/$GITHUB_REPOSITORY/beaker-image-build-cache || true
 
     - name: Build Docker image
-      run: docker build . --file $INPUT_DOCKERFILE --tag docker.pkg.github.com/$GITHUB_REPOSITORY/beaker-image-build-cache --cache-from=docker.pkg.github.com/$GITHUB_REPOSITORY/beaker-image-build-cache
+      run: docker build . --file Dockerfile --tag docker.pkg.github.com/$GITHUB_REPOSITORY/beaker-image-build-cache --cache-from=docker.pkg.github.com/$GITHUB_REPOSITORY/beaker-image-build-cache
 
     - name: Cache Docker image
       run: docker push docker.pkg.github.com/$GITHUB_REPOSITORY/beaker-image-build-cache
