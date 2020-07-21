@@ -35,4 +35,4 @@ jobs:
       run: docker push docker.pkg.github.com/$GITHUB_REPOSITORY/beaker-image-build-cache
 
     - name: Create Beaker image
-      run: echo "::set-output name=image::$(./beaker image create -q beaker-cloud-build)"
+      run: echo "::set-output name=image::$(./beaker image create -q docker.pkg.github.com/$GITHUB_REPOSITORY/beaker-image-build-cache)"
