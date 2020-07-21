@@ -20,4 +20,4 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     - name: Beaker Image Builder
-      uses: beaker/image-builder@0.0.1
+      uses: beaker/image-builder@master
