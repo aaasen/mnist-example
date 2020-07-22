@@ -27,3 +27,4 @@ jobs:
         beakerToken: ${{ secrets.BEAKER_TOKEN }}
         beakerWorkspace: "lane/image"
         imageName: "mnist-example-github"
+        github_token: ${{ secrets.GITHUB_TOKEN }}
