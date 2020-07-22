@@ -21,7 +21,9 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Beaker Image Builder
-      uses: beaker/image-builder@0.0.3
+      uses: beaker/image-builder@master
       with:
         # Beaker user token. This should be stored as a repository secret.
         beakerToken: ${{ secrets.BEAKER_TOKEN }}
+        beakerWorkspace: "lane/image"
+        imageName: "mnist-example-github"
