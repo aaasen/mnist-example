@@ -25,5 +25,5 @@ jobs:
       with:
         beaker_token: ${{ secrets.BEAKER_TOKEN }}
         beaker_workspace: "lane/image"
-        beaker_image_name: ${{ github.event.repository.name }}-${{ github.ref }}-${{ github.sha	}}
+        beaker_image_name: ${{ github.event.repository.name }}-${{ github.sha	}}
         github_token: ${{ secrets.GITHUB_TOKEN }}
