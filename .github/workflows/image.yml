@@ -23,8 +23,7 @@ jobs:
     - name: Beaker Image Builder
       uses: beaker/image-builder@master
       with:
-        # Beaker user token. This should be stored as a repository secret.
-        beakerToken: ${{ secrets.BEAKER_TOKEN }}
-        beakerWorkspace: "lane/image"
-        imageName: "mnist-example-github"
+        beaker_token: ${{ secrets.BEAKER_TOKEN }}
+        beaker_workspace: "lane/image"
+        beaker_image_name: ${{ github.event.repository.name }}-${{ github.ref }}-${{ github.sha	}}
         github_token: ${{ secrets.GITHUB_TOKEN }}
